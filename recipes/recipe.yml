@@ -22,21 +22,36 @@ modules:
       copr:
         - atim/starship
         - ublue-os/staging
+        - ublue-os/packages
         - che/nerd-fonts
         - solopasha/hyprland
         - brycensranch/gpu-screen-recorder-git
         - scottames/awww
+        - eddsalkield/swaylock-effects
+        - atim/ubuntu-fonts
     install:
       packages:
         - micro
         - starship
+        - flatpak
+        - vulkan
+        - wireplumber
+        - firewalld
+        - nerd-fonts
         - git
         - thunar
+        - xfce4-settings 
+        - xfce4-taskmanager
         - btop
         - eww
         - fastfetch
         - gpu-screen-recorder-ui
         - hyprland
+        - hyprland-qt-supported
+        - hyprlock
+        - hyprpicker
+        - hyprutils
+        - hyprswitch
         - kitty
         - NetworkManager
         - rofi
@@ -49,6 +64,86 @@ modules:
         - plymouth
         - fontconfig
         - awww
+        - ublue-brew
+        - grubby
+        - xdg-user-dirs
+        - xdg-desktop-portal
+        - xdg-desktop-portal-wlr
+        - xdg-desktop-portal-hyprland
+        - xdg-desktop-portal-gnome
+        - gnome-text-editor
+        - flameshot
+        - playerctl
+        - grim
+        - lm_sensors
+        - libnotify
+        - fcitx5
+        - copyq
+        - gsettings-desktop-schemas
+        - qt5-base
+        - qt5-multimedia
+        - qt5-svg
+        - qt5-wayland
+        - qt5ct
+        - qt6-base
+        - qt6-wayland
+        - qt6ct
+        - google-noto-fonts-all
+        - xclip
+        - wl-clipboard
+        - clipnotify
+        - brightnessctl
+        - zip
+        - libzip
+        - file-roller
+        - unzip
+        - thunar-archive-plugin
+        - swaylock-effects
+        - python3
+        - python3-cairo
+        - python3-installer
+        - python3-numpy
+        - python3-pillow
+        - python3-pip
+        - python3-psutil
+        - python3-pyqt5
+        - python3-pyqt6
+        - python3-qt5-webengine
+        - python3-pyqt6-sip
+        - python3-pyqt5-sip
+        - python3-tqdm
+        - xkb-switch
+        - pipewire-pulseaudio
+        - jetbrains-mono-fonts-all
+        - granite
+        - qimgv
+        - sxiv
+        - libhandy
+        - python3-pypresence
+        - xorg-xhost
+        - polkit-gnome
+        - polkit-qt6
+        - ffmpegthumbnailer
+        - tumbler
+        - slurp
+        - bc
+        - coreutils
+        - dmenu
+        - dejavu-fonts-all
+        - ubuntu-family-fonts
+        - sil-doulos-fonts
+        - hanamin-fonts 
+        - sazanami-fonts-all
+        - baekmuk-ttf-fonts-all
+        - cjkuni-uming-fonts 
+        - fcitx5-configtool
+        - fcitx-mozc
+        - mpv
+        - jq
+        - ffmpeg
+        - gstreamer1-plugin-libav
+        - qt6-qtmultimedia
+        - gparted
 
   - type: script
     scripts:
@@ -62,7 +157,10 @@ modules:
           title: Flathub (system)
         install:
           - one.ablaze.floorp
+          - com.google.Chrome
           - com.visualstudio.code-oss
+          - dev.vencord.Vesktop
+          - com.valvesoftware.Steam
           - com.github.tchx84.Flatseal
           - io.github.dvlv.boxbuddyrs
       - scope: user
