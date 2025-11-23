@@ -47,7 +47,7 @@ modules:
         - fastfetch
         - gpu-screen-recorder-ui
         - hyprland
-        - hyprland-qt-support
+        # - hyprland-qt-support
         - hyprlock
         - hyprpicker
         - hyprutils
