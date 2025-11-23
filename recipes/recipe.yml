@@ -1,13 +1,13 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
-name: template
+name: ohaiibuzzle-ublue-elysia
 # description will be included in the image's metadata
-description: This is my personal OS image.
+description: ElysiaOS, uBlue
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 42 # latest is also supported if you want new updates ASAP
+base-image: ghcr.io/ublue-os/base-main
+image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -21,25 +21,53 @@ modules:
     repos:
       copr:
         - atim/starship
+        - ublue-os/staging
+        - che/nerd-fonts
+        - solopasha/hyprland
+        - brycensranch/gpu-screen-recorder-git
+        - scottames/awww
     install:
       packages:
         - micro
         - starship
-    remove:
-      packages:
-        # example: removing firefox (in favor of the flatpak)
-        # "firefox" is the main package, "firefox-langpacks" is a dependency
-        - firefox
-        - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+        - git
+        - thunar
+        - btop
+        - eww
+        - fastfetch
+        - gpu-screen-recorder-ui
+        - hyprland
+        - kitty
+        - NetworkManager
+        - rofi
+        - curl
+        - wget
+        - swaync
+        - waybar
+        - wlogout
+        - sddm
+        - plymouth
+        - fontconfig
+        - awww
 
-  - type: default-flatpaks
-    configurations:
+  - type: script
+    scripts:
+      - elysia.sh
+
+  - type: default-flatpaks@v2
+    configurations: 
       - notify: true # Send notification after install/uninstall is finished (true/false)
         scope: system
-        # If no repo information is specified, Flathub will be used by default
-        install: # system flatpaks we want all users to have and not remove
-          - org.mozilla.firefox
-          - org.gnome.Loupe
-      - scope: user # Also add Flathub user repo, but no user packages
+        repo:
+          title: Flathub (system)
+        install:
+          - one.ablaze.floorp
+          - com.visualstudio.code-oss
+          - com.github.tchx84.Flatseal
+          - io.github.dvlv.boxbuddyrs
+      - scope: user
+        repo:
+          title: Flathub (user)
+
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
