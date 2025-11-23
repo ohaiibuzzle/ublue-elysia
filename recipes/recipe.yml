@@ -47,11 +47,11 @@ modules:
         - fastfetch
         - gpu-screen-recorder-ui
         - hyprland
-        - hyprland-qt-supported
+        - hyprland-qt-support
         - hyprlock
         - hyprpicker
         - hyprutils
-        - hyprswitch
+        # - hyprswitch
         - kitty
         - NetworkManager
         - rofi
@@ -80,10 +80,10 @@ modules:
         - fcitx5
         - copyq
         - gsettings-desktop-schemas
-        - qt5-base
-        - qt5-multimedia
-        - qt5-svg
-        - qt5-wayland
+        - qt5-qtbase
+        - qt5-qtmultimedia
+        - qt5-qtsvg
+        - qt5-qtwayland
         - qt5ct
         - qt6-base
         - qt6-wayland
@@ -91,7 +91,7 @@ modules:
         - google-noto-fonts-all
         - xclip
         - wl-clipboard
-        - clipnotify
+        # - clipnotify
         - brightnessctl
         - zip
         - libzip
@@ -106,7 +106,7 @@ modules:
         - python3-pillow
         - python3-pip
         - python3-psutil
-        - python3-pyqt5
+        - python3-qt5
         - python3-pyqt6
         - python3-qt5-webengine
         - python3-pyqt6-sip
@@ -120,9 +120,11 @@ modules:
         - sxiv
         - libhandy
         - python3-pypresence
-        - xorg-xhost
-        - polkit-gnome
-        - polkit-qt6
+        - xhost
+        - polkit
+        - mate-polkit
+        # - polkit-gnome
+        # - polkit-qt6
         - ffmpegthumbnailer
         - tumbler
         - slurp
@@ -137,7 +139,7 @@ modules:
         - baekmuk-ttf-fonts-all
         - cjkuni-uming-fonts 
         - fcitx5-configtool
-        - fcitx-mozc
+        - fcitx5-mozc
         - mpv
         - jq
         - ffmpeg
