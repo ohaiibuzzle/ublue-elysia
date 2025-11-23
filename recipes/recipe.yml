@@ -85,8 +85,8 @@ modules:
         - qt5-qtsvg
         - qt5-qtwayland
         - qt5ct
-        - qt6-base
-        - qt6-wayland
+        - qt6-qtbase
+        - qt6-qtwayland
         - qt6ct
         - google-noto-fonts-all
         - xclip
@@ -112,7 +112,7 @@ modules:
         - python3-pyqt6-sip
         - python3-pyqt5-sip
         - python3-tqdm
-        - xkb-switch
+        # - xkb-switch
         - pipewire-pulseaudio
         - jetbrains-mono-fonts-all
         - granite
