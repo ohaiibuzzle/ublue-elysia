@@ -35,7 +35,7 @@ cp -rv /tmp/ely/SDDM/* /usr/share/sddm/themes/
 sed -i 's/swww/awww/g' /tmp/ely/bin/wallpaper-switch.sh
 cp -rv /tmp/ely/bin/* /usr/bin/
 cp -v /tmp/ely/services/wallpaper-auto* /usr/lib/systemd/system/
-cp -rv /tmp/ely/plymouth/* /usr/share/plymouth/themes/
+cp -rv /tmp/ely/plymouth/themes/* /usr/share/plymouth/themes/
 
 rm -rf /tmp/ely
 
