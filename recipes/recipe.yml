@@ -146,6 +146,10 @@ modules:
         - gstreamer1-plugin-libav
         - qt6-qtmultimedia
         - gparted
+        - make
+        - automake
+        - gcc
+        - gcc-c++
 
   - type: script
     scripts:
