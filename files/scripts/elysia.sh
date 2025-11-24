@@ -10,7 +10,7 @@ curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
 # Clone ElysiaOS
 cd /tmp
 git clone https://github.com/ElysiaOS/ElysiaOS.git ely
-cd /tmp/ely/
+cd ely
 
 # .config
 mkdir -p /etc/skel/
@@ -37,7 +37,7 @@ cp -rv /tmp/ely/bin/* /usr/bin/
 cp -v /tmp/ely/services/wallpaper-auto* /usr/lib/systemd/system/
 cp -rv /tmp/ely/plymouth/themes/* /usr/share/plymouth/themes/
 
-rm -rf /tmp/ely/
+rm -rf /tmp/ely
 
 plymouth-set-default-theme elysiaos-style2
 fc-cache -fsv
