@@ -42,7 +42,7 @@ git clone https://github.com/ElysiaOS/elysia-launcher.git build/ && \
     rm -r build
 
 git clone https://github.com/ElysiaOS/elysia-downloader.git build/ && \
-    pushd build/ && \ 
+    pushd build/ && \
     bash build.sh && \
     install -D -m 755 build/ElysiaDownloader /usr/bin/ && \
     install -D -m 755 elysia-downloader.desktop /usr/share/applications && \
@@ -54,29 +54,30 @@ git clone https://github.com/ElysiaOS/elysiaos-widgets.git build/ && \
 pushd build/
 
 # aboutpage
-pushd aboutpage/
-make && make install
+pushd aboutpage/ && \
+make &&\
+install -D -m 755 about_system /usr/bin && \
 popd
 
 # clock
-pushd clock/
-bash build.sh
-install -D -m 755 clock_widget /usr/bin
+pushd clock/ && \
+bash build.sh && \
+install -D -m 755 clock_widget /usr/bin && \
 popd
 
 # visualizer
-pushd visualizer/
-bash build.sh
-install -D -m 755 visualizer /usr/bin
-install -D -m 755 visualizer_dark /usr/bin
+pushd visualizer/ && \
+bash build.sh && \
+install -D -m 755 visualizer /usr/bin && \
+install -D -m 755 visualizer_dark /usr/bin && \
 popd
 
 # elysia-widgets
-pushd elysia-widgets/
-make
-install -D -m 755 elysia-widget-client /usr/bin
-install -D -m 755 elysia-widget-daemon /usr/bin
-popd 
+pushd elysia-widgets/ && \
+make && \
+install -D -m 755 elysia-widget-client /usr/bin && \
+install -D -m 755 elysia-widget-daemon /usr/bin && \
+popd
 
 popd
 rm -r build/
