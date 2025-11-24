@@ -43,7 +43,7 @@ git clone https://github.com/ElysiaOS/elysia-launcher.git build/ && \
 
 git clone https://github.com/ElysiaOS/elysia-downloader.git build/ && \
     pushd build/ && \ 
-    ./build.sh && \
+    bash build.sh && \
     install -D -m 755 build/ElysiaDownloader /usr/bin/ && \
     install -D -m 755 elysia-downloader.desktop /usr/share/applications && \
     popd && \
@@ -60,13 +60,13 @@ popd
 
 # clock
 pushd clock/
-./build.sh
+bash build.sh
 install -D -m 755 clock_widget /usr/bin
 popd
 
 # visualizer
 pushd visualizer/
-./build.sh
+bash build.sh
 install -D -m 755 visualizer /usr/bin
 install -D -m 755 visualizer_dark /usr/bin
 popd
