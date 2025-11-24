@@ -146,10 +146,25 @@ modules:
         - gstreamer1-plugin-libav
         - qt6-qtmultimedia
         - gparted
+
+        # For now, development packages so we can build stuff
         - make
         - automake
         - gcc
         - gcc-c++
+        - cmake
+        - gtk3-devel
+        - json-c-devel
+        - gtk-layer-shell-devel
+        - libdbusmenu-gtk3-devel
+        - NetworkManager-libnm-devel
+        - gtk4-devel
+        - libcurl-devel
+        - jsoncpp-devel
+        - gtkmm3.0-devel
+        - pulseaudio-libs-devel
+        
+
 
   - type: script
     scripts:
