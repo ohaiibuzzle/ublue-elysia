@@ -18,11 +18,11 @@ cp -rv /tmp/ely/.cache /etc/skel/.cache
 
 # This one needs a fixup for awww
 cp -rv /tmp/ely/.config /etc/skel/.config
-sed -i 's/swww/awww/g' /etc/skel/.config/hypr/auto_start.conf /etc/skel/.config/hypr/Scripts/wallpaper.sh
+grep -rlZ swww . | xargs -0 sed -i 's/swww/awww/g'
 
 cp -rv /tmp/ely/.floorp /etc/skel/.floorp
-cp -rv /tmp/ely/.bashrc /etc/skel/.bashrc
-cp -rv /tmp/ely/.zshrc /etc/skel/.zshrc
+cp -rv /tmp/ely/.bashrc /etc/skel/.bashrc && sed -i 's|~/bin/elylogo.sh|elylogo.sh|g' /etc/skel/.bashrc
+cp -rv /tmp/ely/.zshrc /etc/skel/.zshrc && sed -i 's|~/bin/elylogo.sh|elylogo.sh|g' /etc/skel/.zshrc
 
 cp -rv /tmp/ely/.icons/* /usr/share/icons/
 cp -rv /tmp/ely/fonts/* /usr/share/fonts/

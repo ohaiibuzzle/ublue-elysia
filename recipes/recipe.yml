@@ -165,8 +165,6 @@ modules:
         - gtkmm3.0-devel
         - pulseaudio-libs-devel
         
-
-
   - type: script
     scripts:
       - elysia.sh
