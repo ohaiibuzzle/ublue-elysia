@@ -43,5 +43,6 @@ cp -rv /tmp/ely/plymouth/themes/* /usr/share/plymouth/themes/
 
 rm -rf /tmp/ely
 
-plymouth-set-default-theme -R elysiaos-style2
+plymouth-set-default-theme elysiaos-style2
 fc-cache -fsv
+dconf update
