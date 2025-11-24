@@ -154,6 +154,7 @@ modules:
   - type: script
     scripts:
       - elysia.sh
+      - elysia-packages.sh
 
   - type: default-flatpaks@v2
     configurations: 
