@@ -6,17 +6,17 @@
 set -oue pipefail
 
 git clone https://github.com/ElysiaOS/elysiaos-bar.git build/ && \
-    cd build/ && \
+    pushd build/ && \
     make && \
     install -D -m 755 elysiaos-bar /usr/bin && \
-    cd .. && \
+    popd && \
     rm -r build
 
 git clone https://github.com/ElysiaOS/elysia-welcome-elysiaos.git build/ && \
-    cd build/ && \
+    pushd build/ && \
     make && \
     install -D -m 755 elysia-welcome /usr/bin && \
-    cd .. && \
+    popd && \
     rm -r build
 
 git clone https://github.com/ElysiaOS/elysia-settings-elysiaos.git build/ && \
@@ -33,8 +33,8 @@ git clone https://github.com/ElysiaOS/signet-workspaces-elysiaos.git build/ && \
     popd && \
     rm -r build
 
-git clone https://github.com/ElysiaOS/elysia-launcher.git build/ && 
-    pushd build/ && 
+git clone https://github.com/ElysiaOS/elysia-launcher.git build/ && \
+    pushd build/ && \
     make && \
     install -D -m 755 elysia-launcher /usr/bin && \
     install -D -m 755 ely_launcher /usr/bin && \
