@@ -9,6 +9,7 @@ git clone https://github.com/ElysiaOS/elysiaos-bar.git build/ && \
     pushd build/ && \
     make && \
     install -D -m 755 elysiaos-bar /usr/bin && \
+    install -D -m 755 ely-sni-watcher /usr/bin && \
     popd && \
     rm -r build
 
@@ -23,6 +24,8 @@ git clone https://github.com/ElysiaOS/elysia-settings-elysiaos.git build/ && \
     pushd build/ && \
     make && \
     install -D -m 755 elysettings /usr/bin && \
+    install -D -m 755 ElysiaSettings /usr/bin && \
+    install -D -m 755 elysettings.desktop /usr/share/applications && \
     popd && \
     rm -r build
 
@@ -30,6 +33,7 @@ git clone https://github.com/ElysiaOS/signet-workspaces-elysiaos.git build/ && \
     pushd build/ && \
     make && \
     install -D -m 755 ely-workspace /usr/bin && \
+    install -D -m 755 ely-workspace-switcher /usr/bin && \
     popd && \
     rm -r build
 
@@ -57,6 +61,7 @@ pushd build/
 pushd aboutpage/ && \
 make &&\
 install -D -m 755 about_system /usr/bin && \
+install -D -m 755 ely-sysinfo.desktop /usr/share/applications && \
 popd
 
 # clock
