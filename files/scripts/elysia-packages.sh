@@ -35,10 +35,10 @@ git clone https://github.com/ElysiaOS/signet-workspaces-elysiaos.git build/ && \
 
 git clone https://github.com/ElysiaOS/elysia-launcher.git build/ && 
     pushd build/ && 
-    make && 
-    install -D -m 755 elysia-launcher /usr/bin &&
-    install -D -m 755 ely_launcher /usr/bin &&
-    popd && 
+    make && \
+    install -D -m 755 elysia-launcher /usr/bin && \
+    install -D -m 755 ely_launcher /usr/bin && \
+    popd && \
     rm -r build
 
 git clone https://github.com/ElysiaOS/elysia-downloader.git build/ && \
