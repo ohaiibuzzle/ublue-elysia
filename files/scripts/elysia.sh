@@ -15,7 +15,11 @@ cd ely
 # .config
 mkdir -p /etc/skel/
 cp -rv /tmp/ely/.cache /etc/skel/.cache
+
+# This one needs a fixup for awww
 cp -rv /tmp/ely/.config /etc/skel/.config
+sed -i 's/swww/awww/g' /etc/skel/.config/hypr/auto_start.conf /etc/skel/.config/hypr/Scripts/wallpaper.sh
+
 cp -rv /tmp/ely/.floorp /etc/skel/.floorp
 cp -rv /tmp/ely/.bashrc /etc/skel/.bashrc
 cp -rv /tmp/ely/.zshrc /etc/skel/.zshrc
