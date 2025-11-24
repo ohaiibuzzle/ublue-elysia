@@ -189,4 +189,10 @@ modules:
           title: Flathub (user)
 
   - type: initramfs
+  - type: os-release
+    properties:
+      ID: elysiaos
+      ID_LIKE: fedora
+      NAME: ElysiaOS
+      PRETTY_NAME: ElysiaOS - Universal Blue Edition
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
