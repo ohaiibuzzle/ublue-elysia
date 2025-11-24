@@ -69,11 +69,11 @@ popd
 pushd visualizer/ && \
 bash build.sh && \
 install -D -m 755 visualizer /usr/bin && \
-install -D -m 755 visualizer_dark /usr/bin && \
+install -D -m 755 visualizer-dark /usr/bin && \
 popd
 
-# elysia-widgets
-pushd elysia-widgets/ && \
+# elysia-widget
+pushd elysia-widget/ && \
 make && \
 install -D -m 755 elysia-widget-client /usr/bin && \
 install -D -m 755 elysia-widget-daemon /usr/bin && \
