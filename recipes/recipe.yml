@@ -147,6 +147,7 @@ modules:
         - gstreamer1-plugin-libav
         - qt6-qtmultimedia
         - gparted
+        - btop
 
         # For now, development packages so we can build stuff
         - make

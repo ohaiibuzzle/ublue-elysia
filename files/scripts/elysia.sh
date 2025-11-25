@@ -25,8 +25,13 @@ cp -rv /tmp/ely/.bashrc /etc/skel/.bashrc && sed -i 's|~/bin/elylogo.sh|elylogo.
 cp -rv /tmp/ely/.zshrc /etc/skel/.zshrc && sed -i 's|~/bin/elylogo.sh|elylogo.sh|g' /etc/skel/.zshrc
 
 cp -rv /tmp/ely/.icons/* /usr/share/icons/
+cp -rv /tmp/ely/.icons/ /etc/skel/.icons/
+
 cp -rv /tmp/ely/fonts/* /usr/share/fonts/
+cp -rv /tmp/ely/fonts/* /etc/skel/.fonts/
+
 cp -rv /tmp/ely/.themes/* /usr/share/themes/
+cp -rv /tmp/ely/.themes/* /etc/skel/.themes/
 
 mkdir -p /boot/grub/themes/ElysianRealm
 cp -rv /tmp/ely/GRUB-THEME/ElysianRealm/* /boot/grub/themes/ElysianRealm
@@ -38,7 +43,9 @@ cp -rv /tmp/ely/SDDM/* /usr/share/sddm/themes/
 
 sed -i 's/swww/awww/g' /tmp/ely/bin/wallpaper-switch.sh
 cp -rv /tmp/ely/bin/* /usr/bin/
-cp -v /tmp/ely/services/wallpaper-auto* /usr/lib/systemd/system/
+cp -rv /tmp/ely/bin/ /etc/skel/bin
+
+cp -v /tmp/ely/services/wallpaper-auto* /usr/lib/systemd/user/
 cp -rv /tmp/ely/plymouth/themes/* /usr/share/plymouth/themes/
 
 rm -rf /tmp/ely
