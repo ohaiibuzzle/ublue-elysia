@@ -28,10 +28,10 @@ cp -rv /tmp/ely/.icons/* /usr/share/icons/
 cp -rv /tmp/ely/.icons/ /etc/skel/.icons/
 
 cp -rv /tmp/ely/fonts/* /usr/share/fonts/
-cp -rv /tmp/ely/fonts/* /etc/skel/.fonts/
+cp -rv /tmp/ely/fonts/ /etc/skel/.fonts/
 
 cp -rv /tmp/ely/.themes/* /usr/share/themes/
-cp -rv /tmp/ely/.themes/* /etc/skel/.themes/
+cp -rv /tmp/ely/.themes/ /etc/skel/.themes/
 
 mkdir -p /boot/grub/themes/ElysianRealm
 cp -rv /tmp/ely/GRUB-THEME/ElysianRealm/* /boot/grub/themes/ElysianRealm
